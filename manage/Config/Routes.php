@@ -20,6 +20,7 @@ class Routes{
                 '/api/user/logout' => ['handler' => 'Manage\User::Logout'],
                 '/api/login/send-token' => ['handler' => 'Manage\User::GetResetToken'],
                 '/api/captcha/refresh' => ['handler' => 'Manage\User::ResetUserPassword'],
+                '/login' => ['handler' => 'Manage\Pages::handleLogin'], // New login endpoint
             ]    
         ];
     }
