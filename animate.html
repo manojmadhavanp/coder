@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
+  <style>
+    @keyframes openFlap {
+      0% { transform: rotateX(0deg); transform-origin: top center; }
+      100% { transform: rotateX(-120deg); transform-origin: top center; }
+    }
+    @keyframes closeFlap {
+      0% { transform: rotateX(-120deg); transform-origin: top center; }
+      100% { transform: rotateX(0deg); transform-origin: top center; }
+    }
+    .box-body { fill: #d19e67; stroke: #a97c50; stroke-width: 3; }
+    .flap { fill: #e0b07e; stroke: #a97c50; stroke-width: 2; transform-origin: top center; }
+    .box-open .top-flap {
+      animation: openFlap 1s forwards ease-in;
+    }
+    .box-close .top-flap {
+      animation: closeFlap 1s forwards ease-out;
+    }
+  </style>
+
+  <g class="box box-open">
+    <!-- Box body -->
+    <rect class="box-body" x="140" y="140" width="120" height="80" rx="8" />
+
+    <!-- Top flap -->
+    <polygon class="top-flap flap" points="140,140 200,100 260,140" />
+  </g>
+
+  <!-- You can toggle class between 'box-open' and 'box-close' to animate flap -->
+</svg>

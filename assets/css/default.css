@@ -1,0 +1,277 @@
+/* Default CSS for Bootstrap-based HTML */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #ffffff;
+}
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content styles */
+.content {
+    min-height: calc(100vh - 60px - 300px); /* Adjust these values based on your header and footer heights */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Container for centered content */
+.container-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 2rem 15px;
+}
+/* Header styles */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* Navigation styles */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--light-color) !important;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: var(--light-color) !important;
+}
+
+.nav-link:hover {
+    color: #0056b3;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-outline-light {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.btn-outline-light:hover {
+    color: var(--primary-color);
+    background-color: var(--light-color);
+}
+
+/* Form styles */
+.form-control {
+    border-radius: 0.25rem;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+.responsive-header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.show {
+        display: block;
+    }
+
+    .main-nav ul li {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.footer h5 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Full-width slider styles */
+.full-width-slider {
+    margin-bottom: 3rem;
+}
+
+.carousel-item {
+    height: 70vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    padding: 1.25rem 2rem;
+    color: var(--light-color);
+    text-align: left;
+    background-color: rgba(0, 123, 255, 0.7);
+    border-radius: 10px;
+    max-width: 550px;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for the slider */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 50vh;
+    }
+
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+
+
+ 

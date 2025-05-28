@@ -1,0 +1,35 @@
+{
+  "name": "navimumbaiweb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss styles.css --use autoprefixer cssnano -d public/assets/css/",
+    "dev": "postcss styles.css --use autoprefixer -d public/assets/css/",
+    "prod": "postcss styles.css --use autoprefixer cssnano -d public/assets/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "grunt": "^1.6.1",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "jshint-stylish": "latest",
+    "live-server": "^1.2.2",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.4",
+    "win-node-env": "^0.6.1"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "postcss": "^8.5.3"
+  }
+}

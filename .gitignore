@@ -1,0 +1,59 @@
+# Dependency directories
+/node_modules
+/vendor
+
+# Generated assets
+/public/assets
+
+# Log files
+/logs
+
+# Cached pages
+/public/pages
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor folders
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Database files
+*.sql
+*.sqlite

@@ -1,0 +1,220 @@
+// Variables
+$primary-color: #262970; // Blue color from the logo
+$secondary-color: #6c757d; // Keeping this as is for now
+$dark-color: #202124; // Dark text color
+$light-color: #f1f3f4; // White background and text color
+$accent-color: #ff5421; // Orange color used in some buttons and icons
+$bg-light: #f1f3f4; // Light gray background for light mode
+$bg-dark: #2c2c2c; // Dark background for dark mode
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global Styles
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Theme-specific styles
+[data-bs-theme="light"] {
+  body {
+    color: $dark-color;
+    background-color: $light-color;
+  }
+}
+
+[data-bs-theme="dark"] {
+  body {
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+
+// Navigation
+.navbar {
+  background-color: $primary-color;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+
+  &-brand, .nav-link {
+    color: $light-color !important;
+  }
+    .nav-icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+}
+
+// Buttons
+.btn {
+  &-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-accent {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    color: $light-color;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      border-color: darken($accent-color, 10%);
+    }
+  }
+}
+
+// Content Area
+.content {
+  min-height: calc(100vh - 60px - 300px); // Adjust these values based on your header and footer heights
+  display: flex;
+  flex-direction: column;
+}
+
+.container-centered {
+  @include flex-center;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding: 2rem 15px;
+}
+
+// Cards
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+  }
+}
+
+// Footer
+.footer {
+  background-color: $primary-color;
+  color: $light-color;
+  padding: 3rem 0;
+  margin-top: 3rem;
+
+  a {
+    color: $light-color;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($light-color, 10%);
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Carousel Styles
+.carousel-item {
+  height: 60vh;
+  min-height: 500px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-caption {
+  left: 5%;
+  right: auto;
+  bottom: 200px;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba($primary-color, 0.7);
+  border-radius: 5px;
+  text-align: left;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: $light-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: $light-color;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
+
+// Media query for smaller screens
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    left: 10%;
+    right: 10%;
+    max-width: 80%;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Additional styles can be added here
+
+// Add styles for category boxes
+.category-box {
+  background-color: #f8f9fa; // Light gray background
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+
+  .category-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+}
+
+// Update footer style
+.footer {
+  background-color: $primary-color;
+}
